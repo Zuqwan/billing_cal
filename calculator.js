@@ -26,10 +26,12 @@ function last() {
 function formnew() {
     var quantity = document.createElement('input');
     quantity.placeholder = 'Quantity';
+    quantity.type = 'number'
     quantity.className = "form-control";
     quantity.onkeydown = focusing1;
     var rate = document.createElement('input');
     rate.placeholder = 'Rate';
+    rate.type = 'number'
     rate.className = "form-control";
     rate.onkeydown = focusing2;
     var price = document.createElement('input');
@@ -66,7 +68,7 @@ function focusing1(event) {
         id = parseInt(id) + 1
         id = 'inp' + id;
         var next = document.getElementById(id);
-        next.focus();
+        setTimeout(() => next.focus())
 
     }
 }
@@ -77,7 +79,7 @@ function focusing2(event) {
         id = parseInt(id) + 2;
         id = 'inp' + id;
         var next = document.getElementById(id);
-        next.focus();
+        setTimeout(() => next.focus())
 
     }
 }
