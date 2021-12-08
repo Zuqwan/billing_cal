@@ -62,7 +62,7 @@ function formnew() {
     console.log(count)
 }
 function focusing1(event) {
-    if (event.keyCode == 32) {
+    if (event.keyCode == 32 || event.keyCode == 13) {
         let id1 = (document.activeElement.id);
         let id = id1.split('').splice(3).join('');
         id = parseInt(id) + 1
@@ -73,7 +73,7 @@ function focusing1(event) {
     }
 }
 function focusing2(event) {
-    if (event.keyCode == 32) {
+    if (event.keyCode == 32 || event.keyCode == 13) {
         let id1 = (document.activeElement.id);
         let id = id1.split('').splice(3).join('');
         id = parseInt(id) + 2;
